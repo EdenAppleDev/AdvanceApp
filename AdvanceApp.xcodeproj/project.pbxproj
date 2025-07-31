@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F27DE8282E37109100D26AF2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F27DE8272E37109100D26AF2 /* SnapKit */; };
+		F27DE82B2E3710A300D26AF2 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = F27DE82A2E3710A300D26AF2 /* Then */; };
+		F27DE82E2E37116000D26AF2 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = F27DE82D2E37116000D26AF2 /* RxCocoa */; };
+		F27DE8AB2E38BE5F00D26AF2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F27DE8AA2E38BE5F00D26AF2 /* Kingfisher */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		E8FB517E2E336EDE0045A197 /* AdvanceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdvanceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +43,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F27DE8AB2E38BE5F00D26AF2 /* Kingfisher in Frameworks */,
+				F27DE82E2E37116000D26AF2 /* RxCocoa in Frameworks */,
+				F27DE8282E37109100D26AF2 /* SnapKit in Frameworks */,
+				F27DE82B2E3710A300D26AF2 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +89,10 @@
 			);
 			name = AdvanceApp;
 			packageProductDependencies = (
+				F27DE8272E37109100D26AF2 /* SnapKit */,
+				F27DE82A2E3710A300D26AF2 /* Then */,
+				F27DE82D2E37116000D26AF2 /* RxCocoa */,
+				F27DE8AA2E38BE5F00D26AF2 /* Kingfisher */,
 			);
 			productName = AdvanceApp;
 			productReference = E8FB517E2E336EDE0045A197 /* AdvanceApp.app */;
@@ -107,6 +122,12 @@
 			);
 			mainGroup = E8FB51752E336EDE0045A197;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F27DE8262E37109100D26AF2 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				F27DE8292E3710A300D26AF2 /* XCRemoteSwiftPackageReference "Then" */,
+				F27DE82C2E37116000D26AF2 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				F27DE8A92E38BE5F00D26AF2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E8FB517F2E336EDE0045A197 /* Products */;
 			projectDirPath = "";
@@ -145,19 +166,20 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Y774295X22;
+				DEVELOPMENT_TEAM = 5JJJ2SU6RD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AdvanceApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hxxru.AdvanceApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.edenkim.AdvanceApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -172,19 +194,20 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Y774295X22;
+				DEVELOPMENT_TEAM = 5JJJ2SU6RD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AdvanceApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hxxru.AdvanceApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.edenkim.AdvanceApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -245,7 +268,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -303,7 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -335,6 +358,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F27DE8262E37109100D26AF2 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		F27DE8292E3710A300D26AF2 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		F27DE82C2E37116000D26AF2 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.9.0;
+			};
+		};
+		F27DE8A92E38BE5F00D26AF2 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F27DE8272E37109100D26AF2 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F27DE8262E37109100D26AF2 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		F27DE82A2E3710A300D26AF2 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F27DE8292E3710A300D26AF2 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		F27DE82D2E37116000D26AF2 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F27DE82C2E37116000D26AF2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		F27DE8AA2E38BE5F00D26AF2 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F27DE8A92E38BE5F00D26AF2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E8FB51762E336EDE0045A197 /* Project object */;
 }
