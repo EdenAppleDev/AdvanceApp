@@ -13,6 +13,9 @@ import RxCocoa
 
 class ListViewController: UIViewController {
     
+    private let viewModel = BookListViewModel.shared
+    private let disposeBag = DisposeBag()
+    
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout()).then {
         $0.register(BookCell.self, forCellWithReuseIdentifier: BookCell.id)
         $0.register(SectionHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeaderView.id)
@@ -21,6 +24,7 @@ class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        bind()
     }
     
     private func createLayout() -> UICollectionViewLayout {
@@ -91,11 +95,22 @@ class ListViewController: UIViewController {
         }
     }
     
+    private func bind() {
+        viewModel.books
+            .bind(to: collectionView.rx.items(
+                cellIdentifier: BookCell.id,
+                cellType: BookCell.self
+            )) { index, book, cell in
+                cell.configure(with: book)
+            }
+            .disposed(by: disposeBag)
+    }
+    
     @objc private func addTapped() {
         self.tabBarController?.selectedIndex = 0
     }
     
     @objc private func allDeleteTapped() {
-        
+        BookListViewModel.shared.removeAll()
     }
 }
