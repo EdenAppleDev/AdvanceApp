@@ -156,6 +156,18 @@ class DetailViewController: UIViewController {
                 self?.dismiss(animated: true)
             }
             .disposed(by: disposeBag)
+        addButton.rx.tap
+            .bind { [weak self] in
+                guard let self else { return }
+
+                // BookListViewModel에 추가
+                BookListViewModel.shared.add(self.viewModel.book)
+                
+                // 모달 닫기
+                self.dismiss(animated: true)
+
+            }
+            .disposed(by: disposeBag)
     }
     
 }
