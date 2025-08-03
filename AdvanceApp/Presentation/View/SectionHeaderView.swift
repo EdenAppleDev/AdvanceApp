@@ -13,8 +13,7 @@ final class SectionHeaderView: UICollectionReusableView {
     static let id = "SectionHeaderView"
     
     private let titleLabel = UILabel().then {
-        $0.font = UIFont.boldSystemFont(ofSize: 18)
-        $0.textColor = .white
+        $0.font = UIFont.boldSystemFont(ofSize: 20)
     }
     
     override init(frame: CGRect) {
@@ -35,7 +34,7 @@ final class SectionHeaderView: UICollectionReusableView {
         }
     }
     
-    func configure(with title: String) {
+    func configure(_ title: String) {
         titleLabel.text = title
     }
 }

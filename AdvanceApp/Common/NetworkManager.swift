@@ -10,19 +10,21 @@ import os
 import RxSwift
 
 final class NetworkManager {
-    static let shared = NetworkManager()
+    static let shared = NetworkManager()  // 싱글톤 패턴
     
-    private let baseURL = "https://dapi.kakao.com/v3/search/book"
+    private init() { }  // 외부에서 생성 못하게 막기
     
-    private let apiKey = Bundle.main.apiKey ?? ""
+    private let bookURL = "https://dapi.kakao.com/v3/search/book"
     
-    func searchBooks(query: String) -> Observable<[Book]> {
-        guard var components = URLComponents(string: baseURL) else {
-            return Observable.just([])
+    private let apiKey = Bundle.main.apiKey ?? ""  // Secrets.plist에서 apiKey 가져오기
+    
+    func searchBooks(query: String) -> Observable<[Book]> {  // RxSwift 방식으로 처리하기 위해 Observable로 반환
+        guard var components = URLComponents(string: bookURL) else {  // URLComponents는 URL을 파라피터 단위로 다룰 수 있게 해줌
+            return Observable.just([]) // 유효한 URL이 아니면 빈배열을 감싼 Observable을 반환
         }
         
         components.queryItems = [
-            URLQueryItem(name: "query", value: query),    // 사용자 입력값
+            URLQueryItem(name: "query", value: query),  // 사용자 입력값
             URLQueryItem(name: "target", value: "title")
         ]
         
@@ -30,18 +32,19 @@ final class NetworkManager {
             return Observable.just([])
         }
         
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        request.addValue("KakaoAK \(apiKey)", forHTTPHeaderField: "Authorization")
+        var request = URLRequest(url: url)  // URLRequest 객체 생성
+        request.httpMethod = "GET"  // 서버에 데이터를 요청할 때 사용하는 GET
+        request.addValue("KakaoAK \(apiKey)", forHTTPHeaderField: "Authorization")  // HTTP 요청에 헤더 값을 추가함 (Kakao API에서 요구하는 방식으로 인증
         
-        return URLSession.shared.rx.data(request: request)
-            .map { data in
-                try JSONDecoder().decode(BookResponse.self, from: data).documents
+        return URLSession.shared.rx.data(request: request) // request 보내기
+            .map { data in  // 데이터 받기
+                try JSONDecoder().decode(BookResponse.self, from: data).documents  // [Book]배열로 반환
             }
-            .catchAndReturn([])
+            .catchAndReturn([])  // 실패하면 빈 배열 반환
     }
 }
 
+// MARK: - API_KEY 가져오기
 extension Bundle {
     
     var apiKey: String? {

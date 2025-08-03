@@ -98,10 +98,9 @@ final class BookCell: UICollectionViewCell {
         if let title = book.title,
            let authors = book.authors,
            let price = book.price {
-
+            // 가격 숫자 3개씩 ,
             let formatter = NumberFormatter()
             formatter.numberStyle = .decimal
-
             let formattedPrice = formatter.string(from: NSNumber(value: price)) ?? "\(price)"
 
             titleLabel.text = title

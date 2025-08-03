@@ -48,13 +48,16 @@ class DetailViewController: UIViewController {
     
     private let closeButton = UIButton().then {
         $0.setTitle("X", for: .normal)
-        $0.setTitleColor(.white, for: .normal)
-        $0.backgroundColor = .gray
+        $0.setTitleColor(.label, for: .normal)
+        $0.backgroundColor = .systemGray6
         $0.layer.cornerRadius = 12
+        $0.layer.borderWidth = 1
+        $0.layer.borderColor = UIColor.systemGray3.cgColor
     }
     
     private let addButton = UIButton().then {
         $0.setTitle("담기", for: .normal)
+        $0.titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
         $0.setTitleColor(.white, for: .normal)
         $0.backgroundColor = .systemBlue
         $0.layer.cornerRadius = 12
@@ -63,7 +66,7 @@ class DetailViewController: UIViewController {
     private lazy var buttonStack = UIStackView(arrangedSubviews: [closeButton, addButton]).then {
         $0.axis = .horizontal
         $0.spacing = 16
-        $0.distribution = .fillProportionally
+        $0.distribution = .fill
     }
     
     private lazy var contentStack = UIStackView(arrangedSubviews: [
@@ -115,6 +118,10 @@ class DetailViewController: UIViewController {
             $0.bottom.equalTo(view.safeAreaLayoutGuide).inset(16)
             $0.height.equalTo(44)
         }
+        
+        closeButton.snp.makeConstraints {
+            $0.width.equalTo(44)
+        }
     }
     
     private func bind() {
@@ -142,7 +149,7 @@ class DetailViewController: UIViewController {
             contentsLabel.text = contents
         }
     }
-    
+    // 모달 닫기
     private func setupActions() {
         closeButton.rx.tap
             .bind { [weak self] in
