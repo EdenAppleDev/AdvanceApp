@@ -11,6 +11,8 @@
 		F27DE82B2E3710A300D26AF2 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = F27DE82A2E3710A300D26AF2 /* Then */; };
 		F27DE82E2E37116000D26AF2 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = F27DE82D2E37116000D26AF2 /* RxCocoa */; };
 		F27DE8AB2E38BE5F00D26AF2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F27DE8AA2E38BE5F00D26AF2 /* Kingfisher */; };
+		F2DD90992E3C826F00F97D8A /* Differentiator in Frameworks */ = {isa = PBXBuildFile; productRef = F2DD90982E3C826F00F97D8A /* Differentiator */; };
+		F2DD909B2E3C826F00F97D8A /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = F2DD909A2E3C826F00F97D8A /* RxDataSources */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +23,7 @@
 		E8FB51A92E336EDF0045A197 /* Exceptions for "AdvanceApp" folder in "AdvanceApp" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				Resources/Info.plist,
 			);
 			target = E8FB517D2E336EDE0045A197 /* AdvanceApp */;
 		};
@@ -44,7 +46,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F27DE8AB2E38BE5F00D26AF2 /* Kingfisher in Frameworks */,
+				F2DD90992E3C826F00F97D8A /* Differentiator in Frameworks */,
 				F27DE82E2E37116000D26AF2 /* RxCocoa in Frameworks */,
+				F2DD909B2E3C826F00F97D8A /* RxDataSources in Frameworks */,
 				F27DE8282E37109100D26AF2 /* SnapKit in Frameworks */,
 				F27DE82B2E3710A300D26AF2 /* Then in Frameworks */,
 			);
@@ -93,6 +97,8 @@
 				F27DE82A2E3710A300D26AF2 /* Then */,
 				F27DE82D2E37116000D26AF2 /* RxCocoa */,
 				F27DE8AA2E38BE5F00D26AF2 /* Kingfisher */,
+				F2DD90982E3C826F00F97D8A /* Differentiator */,
+				F2DD909A2E3C826F00F97D8A /* RxDataSources */,
 			);
 			productName = AdvanceApp;
 			productReference = E8FB517E2E336EDE0045A197 /* AdvanceApp.app */;
@@ -127,6 +133,7 @@
 				F27DE8292E3710A300D26AF2 /* XCRemoteSwiftPackageReference "Then" */,
 				F27DE82C2E37116000D26AF2 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				F27DE8A92E38BE5F00D26AF2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				F2DD90972E3C826F00F97D8A /* XCRemoteSwiftPackageReference "RxDataSources" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E8FB517F2E336EDE0045A197 /* Products */;
@@ -168,7 +175,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5JJJ2SU6RD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AdvanceApp/Info.plist;
+				INFOPLIST_FILE = AdvanceApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -196,7 +203,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5JJJ2SU6RD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AdvanceApp/Info.plist;
+				INFOPLIST_FILE = AdvanceApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -392,6 +399,14 @@
 				minimumVersion = 8.5.0;
 			};
 		};
+		F2DD90972E3C826F00F97D8A /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -414,6 +429,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F27DE8A92E38BE5F00D26AF2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		F2DD90982E3C826F00F97D8A /* Differentiator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2DD90972E3C826F00F97D8A /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = Differentiator;
+		};
+		F2DD909A2E3C826F00F97D8A /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2DD90972E3C826F00F97D8A /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
