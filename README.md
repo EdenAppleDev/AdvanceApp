@@ -14,6 +14,11 @@
 
 ---
 
+## 메모리 Leak 확인
+- https://velog.io/@edenkim/TIL-Memory-Leak-확인
+
+---
+
 ## 구조
 
 ```
